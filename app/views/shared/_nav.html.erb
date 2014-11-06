@@ -1,0 +1,35 @@
+<nav>
+	<div class="logo">  
+			<%= link_to image_tag('logo.png'), root_path %> 
+	</div>  
+	<% if current_user %>
+		<!-- signout --> 
+			<%= link_to "sign out", destroy_user_session_path, method: :delete, class: :button %> 
+	<% else %>
+		<!-- sign in, sign up --> 
+		<div class="buttons"> 
+			<div class="dropdown">
+			  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+			    Sign In
+			    <span class="caret"></span>
+			  </button>
+			  <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu1">
+			    <%= render 'devise/sessions/new' %>
+			  </ul>
+			</div> |
+			<div class="dropdown">
+			  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+			    Sign Up
+			    <span class="caret"></span>
+			  </button>
+			  <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu1">
+			    <%= render '/devise/registrations/new' %>
+			  </ul>
+			</div>
+		</div>
+	<% end %>
+</nav>
+
+
+
+<!-- add admin signout -->

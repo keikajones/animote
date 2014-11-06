@@ -1,0 +1,21 @@
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div><%= f.text_field :fname, placeholder: 'First Name',  autofocus: true %></div>
+  <div class="space"></div>
+  <div><%= f.text_field :lname, placeholder: 'Last Name' %></div>
+  <div class="space"></div>
+  <div><%= f.text_field :username, placeholder: 'Username' %></div>
+  <div class="space"></div>
+  <div><%= f.email_field :email, placeholder: 'Email' %></div>
+  <div class="space"></div>
+  <div><%= f.password_field :password, placeholder: 'Password', autocomplete: "off" %></div>
+  <div class="space"></div>
+  <div><%= f.password_field :password_confirmation, placeholder: 'Confirm Password', 
+          autocomplete: "off" %></div>
+  <div class="space"></div><br/>
+  <div><%= f.submit "Sign up" %></div>
+
+<% end %>
+
+<%= render "users/shared/links" %>

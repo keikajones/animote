@@ -1,0 +1,12 @@
+<h1> Enter a link to your own favorite video. </h1>
+
+<%= form_tag(home_video_success_path, method: :post) do %>
+	<%= label_tag :name, "Name your video" %> <br/>
+	<%= text_field_tag :name %> <br/>
+	<%= label_tag :file, 'Embed address of your video.' %> <br/>
+	<%= text_field_tag :file %> <br/>
+	<%= submit_tag 'Submit' %>
+<% end %>
+
+
+

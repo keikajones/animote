@@ -1,0 +1,35 @@
+<div class="render_page">  
+	<% if @emotion.name %> 
+ 
+		<% content_for :stylesheets do %>
+	  	.render_page {background-color: <%= @colors[rand(0..@colors.size-1)].hexcode %>; }
+		<% end %>      
+		<% if @selected == 'video' %>		
+			<%= render '/partials/video' %>
+		<% else @selected == 'music' %>
+			<%= render '/partials/images' %>
+		<% end %> 
+
+	<% else %>
+		<!-- PAGE NOT FOUND -->
+	<% end %> 
+</div>  
+		
+ 
+<script type="text/javascript">
+	function randomColorGen()
+  {
+    var colors = '<%= @hexcodes %>'; 
+		colors = colors.split(',');
+    var color = colors[Math.floor(Math.random()* colors.length)]; 
+    return color;
+	}  
+ 
+ 	setInterval(function(){
+ 		$('.render_page').animate({backgroundColor: randomColorGen() }, 4000)
+ 	}, 4000);   
+</script>
+
+
+
+

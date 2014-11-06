@@ -1,0 +1,21 @@
+<div class="home_index">
+
+	<!-- if user_signed_in?  have to check where the menu is and hide sign in and sign up -->
+
+	<h1>I want to feel... </h1>
+	 
+	<div class="form"> 
+		<%= form_tag(home_show_path, method: :post) do %>  
+			<%= select_tag(:name, options_for_select(
+				[['happy', emotion_id("happy")],
+				 ['sad',   emotion_id("sad")  ]
+				]),{class: :select}) %> 
+	    <br>  
+	    <div class="radio_button"><%= radio_button_tag :radio, :video %></div> <span class="radio_btn_opt">Video</span>
+	    <div class="radio_button"><%= radio_button_tag :radio, :music, checked = true %></div> <span class="radio_btn_opt">Music</span>  
+	    <br>
+			<%= submit_tag 'Hit It!', class: :hit_button %>
+		<% end %>
+	</div> 
+</div>
+

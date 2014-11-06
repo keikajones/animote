@@ -1,0 +1,175 @@
+<script>
+  $(document).ready(function(){
+
+    var images = '<%= @images_name %>';
+    images = images.split(',');
+    console.log(images);
+
+
+    $(function(){ 
+      $(".slides").slidesjs({
+        maxWidth: 1000,
+        maxHeight: 625 
+      });
+    });
+
+    $('.gallery-icon').click(function(){
+      $('.default-wrapper').hide();
+      $('.fullscreen-wrapper').hide();
+      $('.gallery-wrapper').show();
+      $('.gallery-icon').hide();
+      $('.default-container').show();
+    });
+
+    $('.default-container').click(function(){
+      $('.default-wrapper').show();
+      $('.gallery-wrapper').hide();
+      $('.default-container').hide();
+      $('.gallery-icon').show();
+    });
+
+    $('.fullscreen-icon').click(function(){
+      $('.fullscreen-wrapper').show();
+      $('.gallery-wrapper').hide();
+      $('.default-wrapper').hide();
+    });
+
+    $('.compress-icon').click(function(){
+      $('.fullscreen-wrapper').hide();
+      $('default-wrapper').show();
+      $('default-view').show();
+    })
+
+    $('.open-menu').click(function(){
+      $('.sidemenu').show();
+      $('.open-menu').hide();
+      $('.close-menu-container').show();
+    });
+
+    $('.close-menu-container').click(function(){
+      $('.sidemenu').hide();
+      $('.close-menu-container').hide();
+      $('.open-menu').show();
+    });
+  });
+</script>
+
+
+<body>
+  <div class="view-icons">
+    <a href="#"><i class="fa fa-arrows-alt fa-2x fullscreen-icon"></i></a>
+    <a href="#"><i class="fa fa-th fa-2x gallery-icon"></i></a>
+    <div class="default-container"><a href="#"><i class="fa fa-square fa-2x default-icon"></i></a></div>
+  </div>
+  
+  <div class="fullscreen-wrapper">
+    <% if @emotion.name %>
+      <div class="slides fullscreen-view">
+        <% find_images(@emotion.name).each do |image| %>
+          <img src =<%= image.file %>>
+        <% end %>
+      </div>
+    <% else %> 
+      <!-- IMAGE NOT FOUND -->
+    <% end %>
+    <div><a href="#"<i class="fa fa-compress fa-2x compress-icon"></a></i></div>
+  </div>
+
+  <div class="default-wrapper">
+    <% if @emotion.name %>
+      <div class="slides default-view">
+        <% find_images(@emotion.name).each do |image| %>
+          <img src =<%= image.file %>>
+        <% end %>
+      </div>
+    <% else %> 
+      <!-- IMAGE NOT FOUND -->
+    <% end %>
+  </div>
+
+  <% if @emotion.name %>
+    <div class="gallery-wrapper"> 
+      <div class="slides gallery-view">
+        <% find_images(@emotion.name).each do |image| %>
+          <img src =<%= image.file %>>
+        <% end %>
+      </div>
+      <div class="slides gallery-view">
+        <% find_images(@emotion.name).each do |image| %>
+          <img src =<%= image.file %>>
+        <% end %>
+      </div>
+      <div class="slides gallery-view">
+        <% find_images(@emotion.name).each do |image| %>
+          <img src =<%= image.file %>>
+        <% end %>
+      </div>
+      <div class="slides gallery-view">
+        <% find_images(@emotion.name).each do |image| %>
+          <img src =<%= image.file %>>
+        <% end %>
+      </div>
+      <div class="slides gallery-view">
+        <% find_images(@emotion.name).each do |image| %>
+          <img src =<%= image.file %>>
+        <% end %>
+      </div>
+      <div class="slides gallery-view">
+        <% find_images(@emotion.name).each do |image| %>
+          <img src =<%= image.file %>>
+        <% end %>
+      </div>
+      <div class="slides gallery-view">
+        <% find_images(@emotion.name).each do |image| %>
+          <img src =<%= image.file %>>
+        <% end %>
+      </div>
+      <div class="slides gallery-view">
+        <% find_images(@emotion.name).each do |image| %>
+          <img src =<%= image.file %>>
+        <% end %>
+      </div>
+      <div class="slides gallery-view">
+        <% find_images(@emotion.name).each do |image| %>
+          <img src =<%= image.file %>>
+        <% end %>
+      </div>
+    </div>
+  <% else %> 
+    <!-- IMAGE NOT FOUND -->
+  <% end %>
+
+  <div class="sidemenu-wrapper">
+    <a href="#"><i class="fa fa-plus fa-2x open-menu"></i></a>
+    <div class="close-menu-container"><a href="#"><i class="fa fa-minus fa-2x close-menu"></i></a></div>
+    <div class="sidemenu">
+      <ul>
+        <li><h4>User's Name</h4></li>
+        <li>Brief Bio</li><br />
+        <li><h5>Favorites</h5></li>
+        <li><h5>Upload</h5></li>
+        <li><h5>Settings</h5></li>
+      </ul>
+    </div>
+  </div>
+
+  <%= render '/partials/soundManager2' %>
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

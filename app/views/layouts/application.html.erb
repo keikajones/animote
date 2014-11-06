@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Animote</title>
+
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <style><%= yield :stylesheets %></style>
+  <link type="text/css" href="/assets/jplayer.blue.monday.css" rel="stylesheet" /> 
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <script type="text/javascript" src="/assets/jquery.jplayer.min.js"></script>
+  <script type="text/javascript" src="/assets/add-on/jplayer.playlist.min.js"></script>
+  <script type="text/javascript" src="/assets/bootstrap_js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="/assets/jquery.slides.js"></script>
+
+  <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css" />
+  <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+  
+  <%= csrf_meta_tags %>
+  <!-- font -->
+  <link href='http://fonts.googleapis.com/css?family=Euphoria+Script' rel='stylesheet' type='text/css'>
+
+  <%= csrf_meta_tags %> 
+
+</head>
+<body>
+
+  <header class="main-nav">
+    <%= render '/users/shared/nav' %>
+  </header> 
+  
+  <div id="wrapper">
+
+    <% if notice %><div id="notice"><%= notice %></div><% end %>
+    <% if alert %><div id="alert"><%= alert %></div><% end %>
+
+    <%= yield %>
+  </div>
+
+</body>
+</html>
