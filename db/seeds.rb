@@ -147,18 +147,38 @@ color50 = Color.create(name: 'christmas red', hexcode: '#B22222')
 color51 = Color.create(name: 'metallic sunburst', hexcode: '#EDD63D')
 color52 = Color.create(name: 'tiger orange', hexcode: '#CB7119')
 
-colorEmotion41 = Color.create(emotion_id: 3, color_id: 41)
-colorEmotion42 = Color.create(emotion_id: 3, color_id: 41)
-colorEmotion43 = Color.create(emotion_id: 3, color_id: 41)
-colorEmotion44 = Color.create(emotion_id: 3, color_id: 41)
-colorEmotion45 = Color.create(emotion_id: 3, color_id: 41)
-colorEmotion46 = Color.create(emotion_id: 3, color_id: 41)
-colorEmotion47 = Color.create(emotion_id: 3, color_id: 41)
-colorEmotion48 = Color.create(emotion_id: 3, color_id: 41)
-colorEmotion49 = Color.create(emotion_id: 3, color_id: 41)
-colorEmotion50 = Color.create(emotion_id: 3, color_id: 41)
-colorEmotion51 = Color.create(emotion_id: 3, color_id: 41)
-colorEmotion52 = Color.create(emotion_id: 3, color_id: 41)
+colorEmotion41 = ColorEmotion.create(emotion_id: 3, color_id: 41)
+colorEmotion42 = ColorEmotion.create(emotion_id: 3, color_id: 41)
+colorEmotion43 = ColorEmotion.create(emotion_id: 3, color_id: 41)
+colorEmotion44 = ColorEmotion.create(emotion_id: 3, color_id: 41)
+colorEmotion45 = ColorEmotion.create(emotion_id: 3, color_id: 41)
+colorEmotion46 = ColorEmotion.create(emotion_id: 3, color_id: 41)
+colorEmotion47 = ColorEmotion.create(emotion_id: 3, color_id: 41)
+colorEmotion48 = ColorEmotion.create(emotion_id: 3, color_id: 41)
+colorEmotion49 = ColorEmotion.create(emotion_id: 3, color_id: 41)
+colorEmotion50 = ColorEmotion.create(emotion_id: 3, color_id: 41)
+colorEmotion51 = ColorEmotion.create(emotion_id: 3, color_id: 41)
+colorEmotion52 = ColorEmotion.create(emotion_id: 3, color_id: 41)
+
+#calm colors
+
+color53 = Color.create(name: 'foam green', hexcode: '#9FD8C7')
+color54 = Color.create(name: 'steel grey', hexcode: '#D2D2D2')
+color55 = Color.create(name: 'salmon', hexcode: '#FC7B7B')
+color56 = Color.create(name: 'rust', hexcode: '#C3A26F')
+color57 = Color.create(name: 'forest green', hexcode: '#418910')
+color58 = Color.create(name: 'teal', hexcode: '#60B8C8')
+color59 = Color.create(name: 'silver', hexcode: '#C9C0BB')
+color60 = Color.create(name: 'shimmering blush', hexcode: '#E69296')
+
+colorEmotion53 = ColorEmotion.create(emotion_id: 4, color_id: 53)
+colorEmotion54 = ColorEmotion.create(emotion_id: 4, color_id: 54)
+colorEmotion55 = ColorEmotion.create(emotion_id: 4, color_id: 55)
+colorEmotion56 = ColorEmotion.create(emotion_id: 4, color_id: 56)
+colorEmotion57 = ColorEmotion.create(emotion_id: 4, color_id: 57)
+colorEmotion58 = ColorEmotion.create(emotion_id: 4, color_id: 58)
+colorEmotion59 = ColorEmotion.create(emotion_id: 4, color_id: 59)
+colorEmotion60 = ColorEmotion.create(emotion_id: 4, color_id: 60)
 
 # Happy Images #
 
@@ -358,7 +378,7 @@ image96 = Image.create(name: "Outdoor Bedroom", file: "https://s3.amazonaws.com/
 image97 = Image.create(name: "Paper Flowers", file: "https://s3.amazonaws.com/emotionsproject/calm/paper-flowers.jpg")
 image98 = Image.create(name: "Peace of Mind", file: "https://s3.amazonaws.com/emotionsproject/calm/peace-of-mind.jpg")
 image99 = Image.create(name: "Spring Sunset", file: "https://s3.amazonaws.com/emotionsproject/calm/spring-sunset.jpg")
-image100 = Image.create(name: "Sunset", file: "https://s3.amazonaws.com/emotionsproject/calm/sunset.jpg"
+image100 = Image.create(name: "Sunset", file: "https://s3.amazonaws.com/emotionsproject/calm/sunset.jpg")
 
 
 # Calm imageEmotions #
