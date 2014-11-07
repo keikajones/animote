@@ -1,0 +1,10 @@
+<div class="contact-form">
+	<h1 id="contact">Contact Us</h1> 
+	<%= form_tag do %>  
+		<%= email_field_tag :email, placeholder = 'Email Address', class: :contact_email %>
+    <br/><br/>
+    <%= text_area_tag :comment, placeholder = 'Enter comment here...', class: :contact_comment %> 
+    <br/><br/>
+		<%= submit_tag 'Send', class: :submit_button %>
+	<% end %>
+</div> 

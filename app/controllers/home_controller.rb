@@ -15,10 +15,11 @@ class HomeController < ApplicationController
 
   def index
   	@emotions = Emotion.all
+    @users = User.all
   end 
 
-  def show  
-  	@emotion = Emotion.find(params[:name])  
+  def show
+    @emotion = Emotion.find(params[:name])  
     @selected = params[:radio] 
     @colors = find_colors(@emotion.name) 
     @hexcodes = hexcodes(@colors)

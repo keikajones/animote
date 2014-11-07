@@ -173,7 +173,7 @@ body{
 			.sign_out_button{
 				float: right;
 				font-size: 24px;
-				margin-top: 10px;
+				margin-top: 7px;
 			}
 		}
 		.dropdown-menu{
@@ -302,7 +302,7 @@ body{
 }
 
 .default-wrapper{
-	width: 1055px;
+	width: 74%;
 	margin: 0 auto;
 	.slides{
 		width: 100%;
@@ -321,18 +321,6 @@ body{
 		float: left;
 		margin: 0 auto;
 		margin-left: 10px;
-	}
-}
-
-.fullscreen-wrapper{
-	position: absolute;
-	width: 100%;
-	top: 0;
-	display: none;
-	.fullscreen-view{
-		position: absolute;
-		width: 100%;
-		z-index: 20;
 	}
 }
 
@@ -491,6 +479,62 @@ body{
 	height: 26px;
 	border-radius: 5px;
 }
+
+/*--------------------- Edit User Page ------------------------*/
+.edit-form{
+	width: 550px;
+	margin: 0 auto;
+	border: 1px solid #aaa;
+	border-radius: 5px;
+	padding: 15px;
+	padding-top: 0;
+	margin-top: 40px;
+}
+
+/*---------------------- Contact Page ------------------------ */
+
+.contact-form{
+	@extend .edit-form;
+	margin-top: 100px;
+}
+
+#contact{
+	font-family: impact;
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+.contact_email{
+	width: 300px;
+	color: #aaa;
+}
+
+.contact_comment{
+	width: 518px;
+	height: 150px;
+}
+
+.submit_button{
+	width: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
