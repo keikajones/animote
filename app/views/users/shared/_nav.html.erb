@@ -5,7 +5,7 @@
 		</li>  
 		<% if current_user %>
 			<!-- signout --> 
-			<li class="buttons">
+			<li class="signin">
 				<%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: :sign_out_button %> 
 			</li>
 		<% else %>
@@ -19,7 +19,7 @@
 				  <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu1">
 				    <%= render 'users/sessions/new' %>
 				  </ul>
-				</span> |
+				</span> 
 				<span class="dropdown">
 				  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
 				    Sign Up

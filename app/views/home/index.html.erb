@@ -1,8 +1,9 @@
+<div id="wrapper">
 <div class="home_index">
 
 	<!-- if user_signed_in?  have to check where the menu is and hide sign in and sign up -->
 
-	<h1>I want to feel... </h1>
+	<h1 id="feel">I want to feel... </h1>
 	 
 	<div class="form"> 
 		<%= form_tag(home_show_path, method: :post) do %>  
@@ -17,5 +18,6 @@
 			<%= submit_tag 'Hit It!', class: :hit_button %>
 		<% end %>
 	</div> 
+</div>
 </div>
 

@@ -1,3 +1,23 @@
+<script>
+  $(document).ready(function(){
+		$('.open-menu').click(function(){
+      $('.sidemenu').show();
+      $('.open-menu').hide();
+      $('.close-menu-container').show();
+    });
+
+    $('.close-menu-container').click(function(){
+      $('.sidemenu').hide();
+      $('.close-menu-container').hide();
+      $('.open-menu').show();
+    });
+  });
+
+  function nextvid(){
+  	location.reload();
+  };
+</script>
+
 <% if @emotion.name %>
 	<% videos = find_videos(@emotion.name) %> 
   <% video = videos[rand(0..videos.size-1)] %> 
@@ -7,19 +27,49 @@
 	<!-- VIDEO NOT FOUND -->
 <% end %>
   
-<div class="space"> </div>
-
 <div id="videoBox">
-<h1> Video: <%= name %> </h1>
 <iframe width="1280" height="720" src=http://<%= file %>?rel=0&autoplay=1 frameborder="0" allowfullscreen></iframe> <br/>
-</div>
-<button onclick='nextvid()'>Next</button>
+</div>  
+<button onclick="nextvid()">Next</button>
+
+<% if current_user %>
+    <a href="#"><i class="fa fa-plus fa-2x open-menu"></i></a>
+    <div class="close-menu-container"><a href="#"><i class="fa fa-minus fa-2x close-menu"></i></a></div>
+    <div class="sidemenu">
+      <ul>
+        <li><h4>User's Name</h4></li>
+        <li>Brief Bio</li><br />
+        <li><h5>Favorites</h5></li>
+        <li><h5>Upload</h5></li>
+        <li><h5>Settings</h5></li>
+      </ul>
+    </div>
+  <% end %>
 
 <div class="footspace"> </div>
 
-<script type="text/javascript"> 
-	function nextvid(){ 
-		location.reload();
-	};	 
- 
-</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> b17febe695e56297a6e708707f70d718f3941728
