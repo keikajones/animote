@@ -14,7 +14,6 @@
 
     $('.gallery-icon').click(function(){
       $('.default-wrapper').hide();
-      $('.fullscreen-wrapper').hide();
       $('.gallery-wrapper').show();
       $('.gallery-icon').hide();
       $('.default-container').show();
@@ -26,18 +25,6 @@
       $('.default-container').hide();
       $('.gallery-icon').show();
     });
-
-    $('.fullscreen-icon').click(function(){
-      $('.fullscreen-wrapper').show();
-      $('.gallery-wrapper').hide();
-      $('.default-wrapper').hide();
-    });
-
-    $('.compress-icon').click(function(){
-      $('.fullscreen-wrapper').hide();
-      $('default-wrapper').show();
-      $('default-view').show();
-    })
 
     $('.open-menu').click(function(){
       $('.sidemenu').show();
@@ -56,22 +43,8 @@
 
 <body>
   <div class="view-icons">
-    <a href="#"><i class="fa fa-arrows-alt fa-2x fullscreen-icon"></i></a>
     <a href="#"><i class="fa fa-th fa-2x gallery-icon"></i></a>
     <div class="default-container"><a href="#"><i class="fa fa-square fa-2x default-icon"></i></a></div>
-  </div>
-  
-  <div class="fullscreen-wrapper">
-    <% if @emotion.name %>
-      <div class="slides fullscreen-view">
-        <% find_images(@emotion.name).each do |image| %>
-          <img src =<%= image.file %>>
-        <% end %>
-      </div>
-    <% else %> 
-      <!-- IMAGE NOT FOUND -->
-    <% end %>
-    <div><a href="#"<i class="fa fa-compress fa-2x compress-icon"></a></i></div>
   </div>
 
   <div class="default-wrapper">
@@ -138,7 +111,7 @@
     <!-- IMAGE NOT FOUND -->
   <% end %>
 
-  <div class="sidemenu-wrapper">
+  <% if current_user %>
     <a href="#"><i class="fa fa-plus fa-2x open-menu"></i></a>
     <div class="close-menu-container"><a href="#"><i class="fa fa-minus fa-2x close-menu"></i></a></div>
     <div class="sidemenu">
@@ -150,7 +123,7 @@
         <li><h5>Settings</h5></li>
       </ul>
     </div>
-  </div>
+  <% end %>
 
   <div class="music-player">
     <%= render '/partials/soundManager2' %>

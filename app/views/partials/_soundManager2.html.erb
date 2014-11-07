@@ -1,7 +1,6 @@
 
   <div id="cwrap">
     <div id="nowPlay">
-      <h3 id="npAction">Paused:</h3>
       <div id="npTitle"></div>
     </div>
     <div id="audiowrap">
@@ -11,7 +10,7 @@
         </audio>
       </div>
       <div id="extraControls">
-        <button id="btnNext" class="ctrlbtn">Next Track &gt;&gt;|</button>
+        <button id="btnNext">Next Track</button>
       </div>
     </div>
 </div>
@@ -50,7 +49,7 @@
                         playing = false;
                         npAction.text('Paused:');
                     }).bind('ended', function() {
-                        npAction.text('Paused:');
+                        npAction.text('');
                         if((index + 1) < trackCount) {
                             index = Math.floor(Math.random()*music_files.length);
                             loadTrack(index);

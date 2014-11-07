@@ -131,7 +131,9 @@ body {
         .main-nav ul .signin #dropdownMenu1 {
           background-color: rgba(255, 255, 255, 0); }
         .main-nav ul .signin .sign_out_button {
-          float: right; }
+          float: right;
+          font-size: 24px;
+          margin-top: 10px; }
       .main-nav ul .dropdown-menu {
         margin-right: 10px;
         padding: 10px;
@@ -212,45 +214,41 @@ body {
   width: 75%;
   margin: 0 auto; }
 
-.fullscreen-icon, .gallery-icon, .default-icon {
-  position: absolute;
-  left: 130px;
+.view-icons {
+  width: 50px;
+  height: 40px;
+  position: relative;
+  left: 100px;
   top: 90px;
-  color: #9D9DA1; }
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 5px; }
 
 .gallery-icon, .default-icon {
-  left: 128px;
-  top: 130px;
-  display: none; }
+  color: #9D9DA1;
+  position: relative;
+  left: 11px;
+  top: 8px; }
 
 .default-container {
-  display: none; }
-
-.default-icon {
-  display: none; }
-
-.compress-icon {
-  z-index: 40;
-  position: absolute;
-  top: 0;
-  right: 0;
-  color: #9D9DA1; }
+  display: none;
+  position: relative;
+  left: 2px; }
 
 .default-wrapper {
-  width: 1060px;
+  width: 1055px;
   margin: 0 auto; }
   .default-wrapper .slides {
     width: 100%;
-    margin-top: 20px; }
+    margin-top: -10px; }
 
 .gallery-wrapper {
   width: 1080px;
   margin: 0 auto;
-  margin-top: 30px;
+  margin-top: -10px;
   display: none; }
   .gallery-wrapper .gallery-view {
-    width: 350px;
-    height: 205px;
+    width: 340px;
+    height: 198px;
     float: left;
     margin: 0 auto;
     margin-left: 10px; }
@@ -290,21 +288,31 @@ body {
     .sidemenu ul li {
       list-style: none; }
 
+/*------------------ Sound Manager 2 -----------------------*/
 .music-player {
   position: relative; }
 
-/*------------------ Sound Manager 2 -----------------------*/
-#audio1 {
-  width: 500px; }
+#audiowrap {
+  width: 920px;
+  margin: 0 auto; }
 
-/*.sm2-bar-ui {
- font-size: 16px;
-}
-.sm2-bar-ui .sm2-main-controls,
-.sm2-bar-ui .sm2-playlist-drawer {
- background-color: #2288cc;  non-RGBA fallback 
- background-color: rgba(34, 136, 204, 0.88);
-}
-.sm2-bar-ui .sm2-inline-texture {
- background: transparent;
-}*/
+#audio1 {
+  width: 800px;
+  margin-top: 15px;
+  display: inline-block;
+  float: left; }
+
+#extraControls {
+  display: inline-block;
+  float: left;
+  margin-top: 15px; }
+  #extraControls #btnNext {
+    display: inline-block;
+    float: left;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 6px;
+    margin-left: 5px;
+    height: 31px;
+    width: 100px;
+    border: none;
+    color: #ccc; }
