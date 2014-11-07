@@ -30,13 +30,11 @@
     <%= render '/users/shared/nav' %>
   </header> 
   
-  <div id="wrapper">
 
-    <% if notice %><div id="notice"><%= notice %></div><% end %>
-    <% if alert %><div id="alert"><%= alert %></div><% end %>
+  <% if notice %><div id="notice"><%= notice %></div><% end %>
+  <% if alert %><div id="alert"><%= alert %></div><% end %>
 
-    <%= yield %>
-  </div>
+  <%= yield %>
 
 </body>
 </html>
