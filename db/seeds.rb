@@ -14,12 +14,43 @@ emotion1 = Emotion.create(name: 'happy')
 emotion2 = Emotion.create(name: 'sad')
  
 # Happy Colors #
-color1 = Color.create(name: 'red', hexcode: '#FF1919')
-color2 = Color.create(name: 'flaming orange', hexcode: '#FF3300')
-color3 = Color.create(name: 'beach sand yellow', hexcode: '#FFFF99')
-color4 = Color.create(name: 'neon green', hexcode: '#4DFF4D')
-color5 = Color.create(name: 'bright blue', hexcode: '#33FFFF')
-color6 = Color.create(name: 'hot pink', hexcode: '#FF59D6')
+
+# reds #
+color1 = Color.create(name: 'red', hexcode: '#ED4652')
+color2 = Color.create(name: 'maroon', hexcode: '#C32148')
+
+# oranges #
+color3 = Color.create(name: 'burnt orange', hexcode: '#FF7034')
+color4 = Color.create(name: 'vivid tangerine', hexcode: '#FF9980')
+color5 = Color.create(name: 'neon carrot', hexcode: '#FF9933')
+
+# yellows #
+color6 = Color.create(name: 'beach sand yellow', hexcode: '#FFFF99')
+color7 = Color.create(name: 'unmellow yellow', hexcode: '#FFFF66')
+color8 = Color.create(name: 'golden yellow', hexcode: '#FFDF00')
+
+# greens #
+color9 = Color.create(name: 'yellow green', hexcode: '#47C43F')
+color10 = Color.create(name: 'emerald', hexcode: '#00C957')
+color11 = Color.create(name: 'blue green', hexcode: '#2AC4AB')
+color12 = Color.create(name: 'seafoam green', hexcode: '#71EEB8')
+
+# blues #
+color13 = Color.create(name: 'electric blue', hexcode: '#23B2EE')
+color14 = Color.create(name: 'sky blue', hexcode: '#76D7EA')
+color15 = Color.create(name: 'blue', hexcode: '#265AFF')
+color16 = Color.create(name: 'metallic seaweed', hexcode: '#28A0BB')
+color17 = Color.create(name: 'baby blue', hexcode: '#A3E0FF')
+
+# pinks #
+color18 = Color.create(name: 'primrose', hexcode: '#FF93BE')
+color19 = Color.create(name: 'piggy pink', hexcode: '#FDD7E4')
+color20 = Color.create(name: 'fluorescent pink', hexcode: '#FF5AAC')
+
+# purples #
+color21 = Color.create(name: 'lavender', hexcode: '#D6AEDD')
+color22 = Color.create(name: 'vivid violet', hexcode: '#803790')
+color23 = Color.create(name: 'petite rose', hexcode: '#A4509B')
 
 # Happy ColorEmotions #
 colorEmotion1 = ColorEmotion.create(emotion_id: 1, color_id: 1)
@@ -28,23 +59,76 @@ colorEmotion3 = ColorEmotion.create(emotion_id: 1, color_id: 3)
 colorEmotion4 = ColorEmotion.create(emotion_id: 1, color_id: 4)
 colorEmotion5 = ColorEmotion.create(emotion_id: 1, color_id: 5)
 colorEmotion6 = ColorEmotion.create(emotion_id: 1, color_id: 6)
+colorEmotion7 = ColorEmotion.create(emotion_id: 1, color_id: 7)
+colorEmotion8 = ColorEmotion.create(emotion_id: 1, color_id: 8)
+colorEmotion9 = ColorEmotion.create(emotion_id: 1, color_id: 9)
+colorEmotion10 = ColorEmotion.create(emotion_id: 1, color_id: 10)
+colorEmotion11 = ColorEmotion.create(emotion_id: 1, color_id: 11)
+colorEmotion12 = ColorEmotion.create(emotion_id: 1, color_id: 12)
+colorEmotion13 = ColorEmotion.create(emotion_id: 1, color_id: 13)
+colorEmotion14 = ColorEmotion.create(emotion_id: 1, color_id: 14)
+colorEmotion15 = ColorEmotion.create(emotion_id: 1, color_id: 15)
+colorEmotion16 = ColorEmotion.create(emotion_id: 1, color_id: 16)
+colorEmotion17 = ColorEmotion.create(emotion_id: 1, color_id: 17)
+colorEmotion18 = ColorEmotion.create(emotion_id: 1, color_id: 18)
+colorEmotion19 = ColorEmotion.create(emotion_id: 1, color_id: 19)
+colorEmotion20 = ColorEmotion.create(emotion_id: 1, color_id: 20)
+colorEmotion21 = ColorEmotion.create(emotion_id: 1, color_id: 21)
+colorEmotion22 = ColorEmotion.create(emotion_id: 1, color_id: 22)
+colorEmotion23 = ColorEmotion.create(emotion_id: 1, color_id: 23)
 
 
 # Sad Colors #
-color7 = Color.create(name: 'brick red', hexcode: '#800000')
-color8 = Color.create(name: 'dark rust', hexcode: '#401A00')
-color9 = Color.create(name: 'foggy day', hexcode: '#D9D996')
-color10 = Color.create(name: 'swampy green', hexcode: '#004C00')
-color11 = Color.create(name: 'night blue', hexcode: '#24248F')
-color12 = Color.create(name: 'grandma purple', hexcode: '#694D94')
+
+# greys #
+color24 = Color.create(name: 'silver', hexcode: '#C9C0BB')
+color25 = Color.create(name: 'slate', hexcode: '#404E5A')
+color26 = Color.create(name: 'grey', hexcode: '#8B8680')
+color27 = Color.create(name: 'crystal', hexcode: '#D5D5D5')
+
+# blues #
+
+color28 = Color.create(name: 'pastel blue', hexcode: '#80CEE1')
+color29 = Color.create(name: 'wild blue yonder', hexcode: '#7A89B8')
+color30 = Color.create(name: 'denim', hexcode: '#1560BD')
+
+# browns #
+color31 = Color.create(name: 'tumbleweed', hexcode: '#DEA681')
+color32 = Color.create(name: 'tawny', hexcode: '#997C52')
+color33 = Color.create(name: 'beaver', hexcode: '#926F5B')
+
+# greens #
+color34 = Color.create(name: 'forest green', hexcode: '#5FA777')
+color35 = Color.create(name: 'pea green', hexcode: '#739122')
+color36 = Color.create(name: 'asparagus', hexcode: '#7BA05B')
+
+# oranges #
+color36 = Color.create(name: 'tiger orange', hexcode: '#CB7119')
+color37 = Color.create(name: 'metallic sunburst', hexcode: '#EDD63D')
+
+# reds #
+color38 = Color.create(name: 'gel fx rose', hexcode: '#A9473A')
+color39 = Color.create(name: 'shimmering blush', hexcode: '#E69296')
+color40 = Color.create(name: 'christmas red', hexcode: '#B22222')
 
 # Sad ColorEmotions #
-colorEmotion7 = ColorEmotion.create(emotion_id: 2, color_id: 7)
-colorEmotion8 = ColorEmotion.create(emotion_id: 2, color_id: 8)
-colorEmotion9 = ColorEmotion.create(emotion_id: 2, color_id: 9)
-colorEmotion10 = ColorEmotion.create(emotion_id: 2, color_id: 10)
-colorEmotion11 = ColorEmotion.create(emotion_id: 2, color_id: 11)
-colorEmotion12 = ColorEmotion.create(emotion_id: 2, color_id: 12) 
+colorEmotion24 = ColorEmotion.create(emotion_id: 2, color_id: 24)
+colorEmotion25 = ColorEmotion.create(emotion_id: 2, color_id: 25)
+colorEmotion26 = ColorEmotion.create(emotion_id: 2, color_id: 26)
+colorEmotion27 = ColorEmotion.create(emotion_id: 2, color_id: 27)
+colorEmotion28 = ColorEmotion.create(emotion_id: 2, color_id: 28)
+colorEmotion29 = ColorEmotion.create(emotion_id: 2, color_id: 29)
+colorEmotion30 = ColorEmotion.create(emotion_id: 2, color_id: 30)
+colorEmotion31 = ColorEmotion.create(emotion_id: 2, color_id: 31)
+colorEmotion32 = ColorEmotion.create(emotion_id: 2, color_id: 32)
+colorEmotion33 = ColorEmotion.create(emotion_id: 2, color_id: 33)
+colorEmotion34 = ColorEmotion.create(emotion_id: 2, color_id: 34)
+colorEmotion35 = ColorEmotion.create(emotion_id: 2, color_id: 35) 
+colorEmotion36 = ColorEmotion.create(emotion_id: 2, color_id: 36)
+colorEmotion37 = ColorEmotion.create(emotion_id: 2, color_id: 37)
+colorEmotion38 = ColorEmotion.create(emotion_id: 2, color_id: 38)
+colorEmotion39 = ColorEmotion.create(emotion_id: 2, color_id: 39)
+colorEmotion40 = ColorEmotion.create(emotion_id: 2, color_id: 40)
 
  
 # Happy Images #
@@ -487,3 +571,44 @@ videoEmotion56 = VideoEmotion.create(video_id: 56, emotion_id: 1)
 videoEmotion57 = VideoEmotion.create(video_id: 57, emotion_id: 1) 
 videoEmotion58 = VideoEmotion.create(video_id: 58, emotion_id: 1) 
 videoEmotion59 = VideoEmotion.create(video_id: 59, emotion_id: 1) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

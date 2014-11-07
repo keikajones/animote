@@ -1,110 +1,110 @@
 
-  <div id="cwrap">
-    <div id="nowPlay">
-      <div id="npTitle"></div>
+<div id="cwrap">
+  <div id="nowPlay">
+    <div id="npTitle"></div>
+  </div>
+  <div id="audiowrap">
+    <div id="audio0">
+      <audio id="audio1" controls="controls" width="300">
+        Your browser does not support the HTML5 Audio Tag.
+      </audio>
     </div>
-    <div id="audiowrap">
-      <div id="audio0">
-        <audio id="audio1" controls="controls" width="300">
-          Your browser does not support the HTML5 Audio Tag.
-        </audio>
-      </div>
-      <div id="extraControls">
-        <button id="btnNext">Next Track</button>
-      </div>
+    <div id="extraControls">
+      <button id="btnNext">Next Track</button>
     </div>
+  </div>
 </div>
   
 
 <div class="footspace"></div>
 
-        <script type="text/javascript">
+<script type="text/javascript">
 
-          var music_files = '<%= @music_file %>';
-          music_files = music_files.split(','); 
+  var music_files = '<%= @music_file %>';
+  music_files = music_files.split(','); 
 
-          // var music_names = '<%= @music_name %>';
-          // music_names = music_names.split(',');
-          // console.log(music_names);
+  // var music_names = '<%= @music_name %>';
+  // music_names = music_names.split(',');
+  // console.log(music_names);
 
-          tracks = [];
-          for (var i = music_files.length - 1; i >= 0; i--) {
-            tracks.push({"track":i, "file":music_files[i]});
-          }
- 
-            jQuery(function($) {
-                var supportsAudio = !!document.createElement('audio').canPlayType;
-                if(supportsAudio) {
-                    var index = Math.floor(Math.random()*music_files.length),
-                    playing = false;
-                    mediaPath = src='https://s3.amazonaws.com/emotionsproject/<%= @emotion.name%>+songs/', 
-                    tracks,
-                    trackCount = tracks.length,
-                    npAction = $('#npAction'),
-                    npTitle = $('#npTitle'),
-                    audio = $('#audio1').bind('play', function() {
-                        playing = true;
-                        npAction.text('Now Playing:');
-                    }).bind('pause', function() {
-                        playing = false;
-                        npAction.text('Paused:');
-                    }).bind('ended', function() {
-                        npAction.text('');
-                        if((index + 1) < trackCount) {
-                            index = Math.floor(Math.random()*music_files.length);
-                            loadTrack(index);
-                            audio.play();
-                        } else {
-                            audio.pause();
-                            index = Math.floor(Math.random()*music_files.length);
-                            loadTrack(index);
-                        }
-                    }).get(0),
-                    btnPrev = $('#btnPrev').click(function() {
-                        if((index - 1) > -1) {
-                            index--;
-                            loadTrack(index);
-                            if(playing) {
-                                audio.play();
-                            }
-                        } else {
-                            audio.pause();
-                            index = 0;
-                            loadTrack(index);
-                        }
-                    }),
-                    btnNext = $('#btnNext').click(function() {
-                        if((index + 1) < trackCount) {
-                            index = Math.floor(Math.random()*music_files.length);
-                            loadTrack(index);
-                            if(playing) {
-                                audio.play();
-                            }
-                        } else {
-                            audio.pause();
-                            index = Math.floor(Math.random()*music_files.length);
-                            loadTrack(index);
-                        }
-                    }),
-                    li = $('#plUL li').click(function() {
-                        var id = parseInt($(this).index());
-                        if(id !== index) {
-                            playTrack(id);
-                        }
-                    }),
-                    loadTrack = function(id) {
-                        $('.plSel').removeClass('plSel');
-                        $('#plUL li:eq(' + id + ')').addClass('plSel');
-                        npTitle.text(tracks[id].name);
-                        index = id;
-                        audio.src = mediaPath + tracks[id].file;
-                    },
-                    playTrack = function(id) {
-                        loadTrack(id);
-                        audio.play();
-                    }; 
-                    loadTrack(index);
-                }
-                });
-            
-        </script>
+  tracks = [];
+  for (var i = music_files.length - 1; i >= 0; i--) {
+    tracks.push({"track":i, "file":music_files[i]});
+  }
+
+    jQuery(function($) {
+      var supportsAudio = !!document.createElement('audio').canPlayType;
+      if(supportsAudio) {
+          var index = Math.floor(Math.random()*music_files.length),
+          playing = true;
+          mediaPath = src='https://s3.amazonaws.com/emotionsproject/<%= @emotion.name%>+songs/', 
+          tracks,
+          trackCount = tracks.length,
+          npAction = $('#npAction'),
+          npTitle = $('#npTitle'),
+          audio = $('#audio1').bind('play', function() {
+              playing = true;
+              npAction.text('Now Playing:');
+          }).bind('pause', function() {
+              playing = false;
+              npAction.text('Paused:');
+          }).bind('ended', function() {
+              npAction.text('');
+              if((index + 1) < trackCount) {
+                  index = Math.floor(Math.random()*music_files.length);
+                  loadTrack(index);
+                  audio.play();
+              } else {
+                  audio.pause();
+                  index = Math.floor(Math.random()*music_files.length);
+                  loadTrack(index);
+              }
+          }).get(0),
+          btnPrev = $('#btnPrev').click(function() {
+              if((index - 1) > -1) {
+                  index--;
+                  loadTrack(index);
+                  if(playing) {
+                      audio.play();
+                  }
+              } else {
+                  audio.pause();
+                  index = 0;
+                  loadTrack(index);
+              }
+          }),
+          btnNext = $('#btnNext').click(function() {
+              if((index + 1) < trackCount) {
+                  index = Math.floor(Math.random()*music_files.length);
+                  loadTrack(index);
+                  if(playing) {
+                      audio.play();
+                  }
+              } else {
+                  audio.pause();
+                  index = Math.floor(Math.random()*music_files.length);
+                  loadTrack(index);
+              }
+          }),
+          li = $('#plUL li').click(function() {
+              var id = parseInt($(this).index());
+              if(id !== index) {
+                  playTrack(id);
+              }
+          }),
+          loadTrack = function(id) {
+              $('.plSel').removeClass('plSel');
+              $('#plUL li:eq(' + id + ')').addClass('plSel');
+              npTitle.text(tracks[id].name);
+              index = id;
+              audio.src = mediaPath + tracks[id].file;
+          },
+          playTrack = function(id) {
+              loadTrack(id);
+              audio.play();
+          }; 
+          loadTrack(index);
+        }
+        });
+    
+</script>
