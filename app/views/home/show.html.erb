@@ -8,14 +8,17 @@
 			<%= render '/partials/video' %>
 		<% else @selected == 'music' %>
 			<%= render '/partials/images' %>
+		<% end %>  
+
+		<%= link_to emotion_media_path(@emotion.name, @alternate), method: :get do%>
+			<button class="swap"> 
+				<i class="fa fa-play"></i> <span>|</span>
+				<i class="fa fa-headphones"></i> 
+			</button>	
 		<% end %> 
 
-		<button> 
-			<%= link_to "Swap", home_toggle_path, method: :post %>
-		</button>
-
 	<% else %>
-		<!-- PAGE NOT FOUND -->
+		<% redirect_to root_path %>
 	<% end %> 
 </body>  
 		
