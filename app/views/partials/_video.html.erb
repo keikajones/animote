@@ -12,6 +12,10 @@
       $('.open-menu').show();
     });
   });
+
+  function nextvid(){
+  	location.reload();
+  };
 </script>
 
 <% if @emotion.name %>
@@ -27,6 +31,7 @@
 <div id="videoBox">
 <iframe width="1280" height="720" src=http://<%= file %>?rel=0&autoplay=1 frameborder="0" allowfullscreen></iframe> <br/>
 </div>
+<button onclick="nextvid()">Next</button>
 
 <% if current_user %>
     <a href="#"><i class="fa fa-plus fa-2x open-menu"></i></a>
@@ -43,5 +48,28 @@
   <% end %>
 
 <div class="footspace"> </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
