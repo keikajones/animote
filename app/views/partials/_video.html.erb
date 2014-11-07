@@ -6,26 +6,20 @@
 <% else %> 
 	<!-- VIDEO NOT FOUND -->
 <% end %>
- 
-<div id="menuContainer">
-
-	<h3 class="buttons" id="menu"> Menu </h3>
-
-	<div class="buttons" id="menuField">
-		<ul>
-			<li> <%= link_to 'Add Your Own Video!', home_video_form_path %> </li>
-		</ul>
-	</div>
-
-</div>
-
+  
 <div class="space"> </div>
 
 <div id="videoBox">
 <h1> Video: <%= name %> </h1>
 <iframe width="1280" height="720" src=http://<%= file %>?rel=0&autoplay=1 frameborder="0" allowfullscreen></iframe> <br/>
 </div>
+<button onclick='nextvid()'>Next</button>
 
 <div class="footspace"> </div>
 
-
+<script type="text/javascript"> 
+	function nextvid(){ 
+		location.reload();
+	};	 
+ 
+</script>
