@@ -239,12 +239,12 @@ body {
   margin: 0 auto; }
   .default-wrapper .slides {
     width: 100%;
-    margin-top: -10px; }
+    margin-top: -20px; }
 
 .gallery-wrapper {
   width: 1080px;
   margin: 0 auto;
-  margin-top: -10px;
+  margin-top: -20px;
   display: none; }
   .gallery-wrapper .gallery-view {
     width: 340px;
