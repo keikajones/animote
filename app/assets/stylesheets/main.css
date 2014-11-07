@@ -367,3 +367,16 @@ body {
   padding-top: 15px;
   padding-right: 20px;
   padding-left: 20px; }
+
+.input input {
+  width: 553px;
+  height: 34px; }
+
+.inputbottom input {
+  width: 450px;
+  height: 34px; }
+
+.sub input {
+  width: 58px;
+  height: 26px;
+  border-radius: 5px; }
