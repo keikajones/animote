@@ -9,7 +9,9 @@
 		<%= form_tag(home_show_path, method: :post) do %>  
 			<%= select_tag(:emotion, options_for_select(
 				[['happy', emotion_id("happy")],
-				 ['sad',   emotion_id("sad")  ]
+				 ['sad',   emotion_id("sad")  ],
+				 ['angry', emotion_id("angry")],
+				 ['calm',  emotion_id("calm") ]
 				]),{class: :select}) %> 
 	    <br>  
 	    <div class="radio_button"><%= radio_button_tag :media, :video %></div> <span class="radio_btn_opt">Video</span>

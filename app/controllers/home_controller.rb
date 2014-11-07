@@ -14,7 +14,7 @@ class HomeController < ApplicationController
 	end
 
   def index
-  	@emotions = Emotion.all
+  	@emotions = Emotion.all 
   end
 
   def reroute
@@ -24,7 +24,7 @@ class HomeController < ApplicationController
 
   def show  
   	@emotion = Emotion.find_by_name(params[:emotion])  
-    @selected = params[:media] 
+    @selected = params[:media]   
     @colors = find_colors(@emotion.name) 
     @hexcodes = hexcodes(@colors)
     @music_collection = find_music(@emotion.name)

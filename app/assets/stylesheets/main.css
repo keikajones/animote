@@ -133,7 +133,7 @@ body {
         .main-nav ul .signin .sign_out_button {
           float: right;
           font-size: 24px;
-          margin-top: 10px; }
+          margin-top: 7px; }
       .main-nav ul .dropdown-menu {
         margin-right: 10px;
         padding: 10px;
@@ -166,47 +166,24 @@ body {
   #videoBox {
     text-align: center;
     vertical-align: middle;
-    padding-bottom: 25px; }
+    padding-bottom: 25px;
+    margin-top: 20px; }
 
-  #menuContainer {
-    height: 50px;
-    position: relative; }
-    #menuContainer #refresh {
-      float: left;
-      display: inline-block; }
-    #menuContainer .buttons {
-      position: absolute;
-      right: 75px; }
-    #menuContainer #menu {
-      border: 1px solid black;
-      border-radius: 5px;
-      float: right;
-      margin-top: 0;
-      margin-right: 15px;
-      margin-bottom: 10px;
-      display: inline-block;
-      padding: 10px;
-      background-color: lightgray; }
-
-  .space {
-    height: 10px; }
-
-  #menuField {
-    float: right;
-    font-size: 2em;
-    background-color: lightgray;
-    padding-right: 25px;
-    border: 1px solid black;
+  .nextBtn {
+    position: absolute;
+    right: 80px;
+    bottom: 22px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: none;
     border-radius: 5px;
-    margin-bottom: 10px; }
-    #menuField ul {
-      list-style: none; }
+    height: 40px;
+    width: 50px; }
 
-  #select_video {
-    width: 300px; }
-
-  .footspace {
-    height: 75px; } }
+  .fa-forward {
+    position: relative;
+    top: 2px;
+    left: 2px;
+    color: #ccc; } }
 /*-------------------- images partial -----------------------*/
 .slides {
   width: 75%;
@@ -233,7 +210,7 @@ body {
   left: 2px; }
 
 .default-wrapper {
-  width: 1055px;
+  width: 74%;
   margin: 0 auto; }
   .default-wrapper .slides {
     width: 100%;
@@ -250,16 +227,6 @@ body {
     float: left;
     margin: 0 auto;
     margin-left: 10px; }
-
-.fullscreen-wrapper {
-  position: absolute;
-  width: 100%;
-  top: 0;
-  display: none; }
-  .fullscreen-wrapper .fullscreen-view {
-    position: absolute;
-    width: 100%;
-    z-index: 20; }
 
 .open-menu, .close-menu {
   position: absolute;
@@ -380,3 +347,33 @@ body {
   width: 58px;
   height: 26px;
   border-radius: 5px; }
+
+/*--------------------- Edit User Page ------------------------*/
+.edit-form, .contact-form {
+  width: 550px;
+  margin: 0 auto;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  padding: 15px;
+  padding-top: 0;
+  margin-top: 40px; }
+
+/*---------------------- Contact Page ------------------------ */
+.contact-form {
+  margin-top: 100px; }
+
+#contact {
+  font-family: impact;
+  text-align: center;
+  margin-bottom: 40px; }
+
+.contact_email {
+  width: 300px;
+  color: #aaa; }
+
+.contact_comment {
+  width: 518px;
+  height: 150px; }
+
+.submit_button {
+  width: 100px; }
