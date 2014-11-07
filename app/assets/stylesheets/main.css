@@ -316,3 +316,56 @@ body {
     width: 100px;
     border: none;
     color: #ccc; }
+
+/*------------------ Media Form -----------------------*/
+.mediaForm {
+  background-color: #B4DFD2; }
+
+.topper {
+  padding-top: 25px;
+  padding-left: 60px; }
+
+.choose {
+  margin-top: 10px;
+  margin-left: 34px; }
+
+.radio {
+  width: 100px;
+  font-size: 1.5em; }
+
+.radMarg {
+  padding-left: 100px; }
+
+.radMarg input {
+  margin-top: 10px; }
+
+.formspace {
+  height: 50px; }
+
+#boxone {
+  border: none; }
+
+.col-md-6 {
+  border: 2px solid black;
+  border-radius: 5px;
+  padding-top: 10px;
+  margin-bottom: 50px; }
+
+.buttonSub {
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-top: 20px; }
+
+#botBoxContainer {
+  height: 400px; }
+  #botBoxContainer #bottomBox {
+    margin: 0 auto; }
+
+#bottomBox {
+  margin: 0 auto;
+  width: 500px;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding-top: 15px;
+  padding-right: 20px;
+  padding-left: 20px; }

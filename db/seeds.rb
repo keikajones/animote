@@ -6,10 +6,13 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+user1 = User.create(email: 'k@k',             password: '1234', password_confirmation: '1234', fname: 'Ken',   lname: 'Ng',    username: 'Ken')
+user2 = User.create(email: 'keika@gmail.com', password: '1234', password_confirmation: '1234', fname: 'Keika', lname: 'Jones', username: 'Keika')
+user3 = User.create(email: 'jyim@gmail.com',  password: '1234', password_confirmation: '1234', fname: 'Jason', lname: 'Yim',   username: 'Jason')
+ 
 emotion1 = Emotion.create(name: 'happy')
 emotion2 = Emotion.create(name: 'sad')
-
-
+ 
 # Happy Colors #
 color1 = Color.create(name: 'red', hexcode: '#FF1919')
 color2 = Color.create(name: 'flaming orange', hexcode: '#FF3300')

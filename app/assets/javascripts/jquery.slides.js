@@ -31,7 +31,7 @@
           speed: 500
         },
         fade: {
-          speed: 300,
+          speed: 1000,
           crossfade: true
         }
       },
@@ -364,8 +364,7 @@
     //   }
     //   return e.stopPropagation();
     // };
-    Plugin.prototype.play = function(next) {
-      console.log("hey");
+    Plugin.prototype.play = function(next) { 
       var $element, currentSlide, slidesContainer,
         _this = this;
       $element = $(this.element);
@@ -382,9 +381,7 @@
         }
         $.data(this, "playInterval", setInterval((function() {
           currentSlide = _this.data.current;
-          _this.data.direction = "next";
-
-            console.log(_this.data.total);
+          _this.data.direction = "next"; 
           if (_this.options.play.effect === "fade") {
             return _this._fade();
           } else {
@@ -527,7 +524,7 @@
       this.data = $.data(this);
       if (!this.data.animating && number !== this.data.current + 1) {
         $.data(this, "animating", true);
-        currentSlide = this.data.current;
+        currentSlide = Math.floor(Math.random()* _this.data.total);
         if (number) {
           number = number - 1;
           value = number > currentSlide ? 1 : -1;
