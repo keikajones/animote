@@ -240,6 +240,51 @@ imageEmotion45 = ImageEmotion.create(image_id: 45, emotion_id: 2)
 imageEmotion46 = ImageEmotion.create(image_id: 46, emotion_id: 2)
 imageEmotion47 = ImageEmotion.create(image_id: 47, emotion_id: 2)
 
+
+# Angry Images #
+image48 = Image.create(name: 'building explosion',    file: 'https://s3.amazonaws.com/emotionsproject/angry/building-explosion.jpg')
+image49 = Image.create(name: 'car crash',             file: 'https://s3.amazonaws.com/emotionsproject/angry/car-crash.jpg')
+image50 = Image.create(name: 'eye of sauron',         file: 'https://s3.amazonaws.com/emotionsproject/angry/eye-of-sauron.jpg')
+image51 = Image.create(name: 'godzilla',              file: 'https://s3.amazonaws.com/emotionsproject/angry/godzilla.jpg')
+image52 = Image.create(name: 'goku',                  file: 'https://s3.amazonaws.com/emotionsproject/angry/goku.jpg')
+image53 = Image.create(name: 'hulk',                  file: 'https://s3.amazonaws.com/emotionsproject/angry/hulk.jpg')
+image54 = Image.create(name: 'painting1',             file: 'https://s3.amazonaws.com/emotionsproject/angry/painting1.jpg')
+image55 = Image.create(name: 'painting2',             file: 'https://s3.amazonaws.com/emotionsproject/angry/painting2.jpg')
+image56 = Image.create(name: 'pollock1',              file: 'https://s3.amazonaws.com/emotionsproject/angry/pollock1.jpg')
+image57 = Image.create(name: 'pollock2',              file: 'https://s3.amazonaws.com/emotionsproject/angry/pollock2.jpg')
+image58 = Image.create(name: 'purple lightning',      file: 'https://s3.amazonaws.com/emotionsproject/angry/purple-lightning.jpg')
+image59 = Image.create(name: 'riot',                  file: 'https://s3.amazonaws.com/emotionsproject/angry/riot.jpg')
+image60 = Image.create(name: 'tornade1',              file: 'https://s3.amazonaws.com/emotionsproject/angry/tornado1.jpg')
+image61 = Image.create(name: 'tornado2',              file: 'https://s3.amazonaws.com/emotionsproject/angry/tornado2.jpg')
+image62 = Image.create(name: 'videogame',             file: 'https://s3.amazonaws.com/emotionsproject/angry/videogame.jpg')
+image63 = Image.create(name: 'volcano and lightning', file: 'https://s3.amazonaws.com/emotionsproject/angry/volcano-lightning.jpg')
+image64 = Image.create(name: 'volcano',               file: 'https://s3.amazonaws.com/emotionsproject/angry/volcano.jpg')
+image65 = Image.create(name: 'waves', 		            file: 'https://s3.amazonaws.com/emotionsproject/angry/waves.jpg')
+
+
+# Angry ImageEmotion #
+
+imageEmotion48 = ImageEmotion.create(emotion_id: 3, image_id: 48)
+imageEmotion49 = ImageEmotion.create(emotion_id: 3, image_id: 49)
+imageEmotion50 = ImageEmotion.create(emotion_id: 3, image_id: 50)
+imageEmotion51 = ImageEmotion.create(emotion_id: 3, image_id: 51)
+imageEmotion52 = ImageEmotion.create(emotion_id: 3, image_id: 52)
+imageEmotion53 = ImageEmotion.create(emotion_id: 3, image_id: 53)
+imageEmotion54 = ImageEmotion.create(emotion_id: 3, image_id: 54)
+imageEmotion55 = ImageEmotion.create(emotion_id: 3, image_id: 55)
+imageEmotion56 = ImageEmotion.create(emotion_id: 3, image_id: 56)
+imageEmotion57 = ImageEmotion.create(emotion_id: 3, image_id: 57)
+imageEmotion58 = ImageEmotion.create(emotion_id: 3, image_id: 58)
+imageEmotion59 = ImageEmotion.create(emotion_id: 3, image_id: 59)
+imageEmotion60 = ImageEmotion.create(emotion_id: 3, image_id: 60)
+imageEmotion61 = ImageEmotion.create(emotion_id: 3, image_id: 61)
+imageEmotion62 = ImageEmotion.create(emotion_id: 3, image_id: 62)
+imageEmotion63 = ImageEmotion.create(emotion_id: 3, image_id: 63)
+imageEmotion64 = ImageEmotion.create(emotion_id: 3, image_id: 64)
+imageEmotion65 = ImageEmotion.create(emotion_id: 3, image_id: 65)
+
+
+
 # Happy Music #
 
 music1 = Music.create(name: 'Happy by Pharrell Williams', 																			file: "https://s3.amazonaws.com/emotionsproject/happy+songs/Happy.mp3")
