@@ -1,16 +1,17 @@
 class HomeController < ApplicationController 
-	def video_success
+	def video_form
+    @video = Video.new
+  end
+
+  def video_success
 		@name = params[:name]
 		@file = params[:file]
-		puts '*' *50
+		puts '&' *50
 		puts @name
 		puts @file
-		puts '*' *50
-		# if @video == "1"
-			Video.create name:(@name), file:(@file)
-		# else
-		# 	Video.create name:"sad", file:(params[:file])
-		# end
+		puts '&' *50
+			Video.save name:(@name), file:(@file)
+      flash[:notice]="Video Saved for Review"
 	end
 
   def index
