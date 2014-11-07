@@ -23,24 +23,28 @@
 				<div class="col-md-6 column">
 					<form role="form">
 						<div class="form-group">
-							 <label for="Video Entry">Give your Video entry a title:</label><input type="text" class="form-control" id="Vid1">
+							 <label for="Video Entry">Give your Video entry a title:</label>
+							 <span class="input"> <%= text_field_tag :name %> </span>
 						</div>
 						<div class="form-group">
-							 <label for="Video link">Enter a link for your Video file:</label><input type="text" class="form-control" id="Vid1">
+							 <label for="Video link">Enter a link for your Video file:</label> <br/>
+							 <span class="input"> <%= text_field_tag :file %> </span>
 						</div>
-						<button type="submit" class="buttonSub" class="btn btn-default">Submit</button>
+						<div class="sub"> <%= submit_tag 'Submit' %> </div>
 					</form>
 					<div class="formspace"></div>
 				</div>
 				<div class="col-md-6 column">
 					<form role="form">
 						<div class="form-group">
-							 <label for="Music Entry">Give your Music entry a title:</label><input type="text" class="form-control" id="Mus1">
+							 <label for="Music Entry">Give your Music entry a title:</label>
+							 <span class="input"> <%= text_field_tag :name %> </span>
 						</div>
 						<div class="form-group">
-							 <label for="Music Link">Enter a link for your Music file:</label><input type="text" class="form-control" id="Mus1">
+							 <label for="Music Link">Enter a link for your Music file:</label><br/>
+							 <span class="input"> <%= text_field_tag :file %> </span>
 						</div>
-						<button type="submit" class="buttonSub" class="btn btn-default">Submit</button>
+						<div class="sub"> <%= submit_tag 'Submit' %> </div>
 					</form>
 					<div class="formspace"></div>
 				</div>
@@ -50,12 +54,14 @@
 				<div id="bottomBox">
 					<form role="form">
 						<div class="form-group">
-							 <label for="Image Entry">Give your Image entry a title:</label><input type="text" class="form-control" id="Img1">
+							 <label for="Image Entry">Give your Image entry a title:</label>
+							 <span class="inputbottom"> <%= text_field_tag :name %> </span>
 						</div>
 						<div class="form-group">
-							 <label for="Image link">Enter a link for your Image file:</label><input type="text" class="form-control" id="Img1">
+							 <label for="Image link">Enter a link for your Image file:</label><br/>
+							 <span class="inputbottom"> <%= text_field_tag :file %> </span>
 						</div>
-						<button type="submit" class="buttonSub" class="btn btn-default">Submit</button>
+						<div class="sub"> <%= submit_tag 'Submit' %> </div>
 					</form>
 					<div class="formspace"></div>
 				</div>
