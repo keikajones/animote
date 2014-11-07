@@ -7,9 +7,7 @@ Rails.application.routes.draw do
    
   get 'home/show' 
   post 'home/show', to: 'home#reroute'  
-
-  post 'home/toggle'
-
+  
   get 'home/video_form'
   #post 'home/video_form'
   get 'home/video_success'
