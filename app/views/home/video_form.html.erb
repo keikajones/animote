@@ -23,6 +23,7 @@
 				<div class="col-md-6 column">
 					<form role="form">
 						<div class="form-group">
+						<%= form_tag(home_video_success_path, method: :post) do %>
 							 <label for="Video Entry">Give your Video entry a title:</label>
 							 <span class="input"> <%= text_field_tag :name %> </span>
 						</div>
@@ -31,6 +32,7 @@
 							 <span class="input"> <%= text_field_tag :file %> </span>
 						</div>
 						<div class="sub"> <%= submit_tag 'Submit' %> </div>
+						<% end %>
 					</form>
 					<div class="formspace"></div>
 				</div>

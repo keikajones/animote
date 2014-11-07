@@ -6,7 +6,6 @@ group :development, :test do
 	gem 'quiet_assets' 
 end
 
-gem 'soundmanager-rails'
 gem 'devise'
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -33,7 +32,6 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
-gem 'jplayer-rails'
 gem 'pry-rails', :group => :development
 # gem 'sprockets', '~> 3.0'
 # Use ActiveModel has_secure_password
