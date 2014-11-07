@@ -1,107 +1,21 @@
 
   <div id="cwrap">
     <div id="nowPlay">
-        <h3 id="npAction">Paused:</h3>
-        <div id="npTitle"></div>
+      <h3 id="npAction">Paused:</h3>
+      <div id="npTitle"></div>
     </div>
     <div id="audiowrap">
-        <div id="audio0">
-            <audio id="audio1" controls="controls" width="300">
-                Your browser does not support the HTML5 Audio Tag.
-            </audio>
-        </div>
-        <div id="extraControls">
-            <button id="btnPrev" class="ctrlbtn">|&lt;&lt; Prev Track</button> <button id="btnNext" class="ctrlbtn">Next Track &gt;&gt;|</button>
-        </div>
+      <div id="audio0">
+        <audio id="audio1" controls="controls" width="300">
+          Your browser does not support the HTML5 Audio Tag.
+        </audio>
+      </div>
+      <div id="extraControls">
+        <button id="btnNext" class="ctrlbtn">Next Track &gt;&gt;|</button>
+      </div>
     </div>
 </div>
-
-
-<!-- <div class="sm2-bar-ui">
-
- <div class="bd sm2-main-controls">
-
-  <div class="sm2-inline-texture"></div>
-  <div class="sm2-inline-gradient"></div>
-
-  <div class="sm2-inline-element sm2-button-element">
-   <div class="sm2-button-bd">
-    <a href="#play" class="sm2-inline-button play-pause">Play / pause</a>
-   </div>
-  </div>
-
-  <div class="sm2-inline-element sm2-inline-status">
-
-   <div class="sm2-playlist">
-    <div class="sm2-playlist-target">
-    	<ul>
-    	    <li> src='http://nycda.zone/guie851/Music/Hacken.mp3' </li>
-            <li> src='http://nycda.zone/guie851/Music/moon.m4a' </li>
-            <li> src='http://nycda.zone/guie851/Music/subsong.m4a' </li>
-            <li> src='https://s3.amazonaws.com/emotionsproject/happy+songs/Happy.mp3' </li>
-        </ul> -->
-     <!-- playlist <ul> + <li> markup will be injected here -->
-     <!-- if you want default / non-JS content, you can put that here. -->
-     <!-- <noscript><p>JavaScript is required.</p></noscript>
-    </div>
-   </div>
-
-   <div class="sm2-progress">
-    <div class="sm2-row">
-    <div class="sm2-inline-time">0:00</div>
-     <div class="sm2-progress-bd">
-      <div class="sm2-progress-track">
-       <div class="sm2-progress-bar"></div>
-       <div class="sm2-progress-ball"><div class="icon-overlay"></div></div>
-      </div>
-     </div>
-     <div class="sm2-inline-duration">0:00</div>
-    </div>
-   </div>
-
-  </div>
-
-  <div class="sm2-inline-element sm2-button-element sm2-volume">
-   <div class="sm2-button-bd">
-    <span class="sm2-inline-button sm2-volume-control volume-shade"></span>
-    <a href="#volume" class="sm2-inline-button sm2-volume-control">volume</a>
-   </div>
-  </div>
-
-  <div class="sm2-inline-element sm2-button-element">
-   <div class="sm2-button-bd">
-    <a href="#prev" title="Previous" class="sm2-inline-button previous">&lt; previous</a>
-   </div>
-  </div>
-
-  <div class="sm2-inline-element sm2-button-element">
-   <div class="sm2-button-bd">
-    <a href="#next" title="Next" class="sm2-inline-button next">&gt; next</a>
-   </div>
-  </div> -->
-
-  <!-- unimplemented -->
-  <!--
-  <div class="sm2-inline-element sm2-button-element disabled">
-   <div class="sm2-button-bd">
-    <a href="#repeat" title="Repeat playlist" class="sm2-inline-button repeat">&infin; repeat</a>
-   </div>
-  </div>
-  -->
-
-  <!-- <div class="sm2-inline-element sm2-button-element sm2-menu">
-   <div class="sm2-button-bd">
-    <a href="#menu" class="sm2-inline-button menu">menu</a>
-   </div>
-  </div>
-
- </div>
-
- <div class="bd sm2-playlist-drawer sm2-element">
-
-  <div class="sm2-inline-texture">
-   <div class="sm2-box-shadow"></div>
-  </div> -->
+  
 
 <div class="footspace"></div>
 
@@ -122,7 +36,7 @@
             jQuery(function($) {
                 var supportsAudio = !!document.createElement('audio').canPlayType;
                 if(supportsAudio) {
-                    var index = 0,
+                    var index = Math.floor(Math.random()*music_files.length),
                     playing = false;
                     mediaPath = src='https://s3.amazonaws.com/emotionsproject/<%= @emotion.name%>+songs/', 
                     tracks,
@@ -138,12 +52,12 @@
                     }).bind('ended', function() {
                         npAction.text('Paused:');
                         if((index + 1) < trackCount) {
-                            index++;
+                            index = Math.floor(Math.random()*music_files.length);
                             loadTrack(index);
                             audio.play();
                         } else {
                             audio.pause();
-                            index = 0;
+                            index = Math.floor(Math.random()*music_files.length);
                             loadTrack(index);
                         }
                     }).get(0),
@@ -162,14 +76,14 @@
                     }),
                     btnNext = $('#btnNext').click(function() {
                         if((index + 1) < trackCount) {
-                            index++;
+                            index = Math.floor(Math.random()*music_files.length);
                             loadTrack(index);
                             if(playing) {
                                 audio.play();
                             }
                         } else {
                             audio.pause();
-                            index = 0;
+                            index = Math.floor(Math.random()*music_files.length);
                             loadTrack(index);
                         }
                     }),
