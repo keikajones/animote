@@ -7,15 +7,15 @@
 	 
 	<div class="form"> 
 		<%= form_tag(home_show_path, method: :post) do %>  
-			<%= select_tag(:name, options_for_select(
+			<%= select_tag(:emotion, options_for_select(
 				[['happy', emotion_id("happy")],
 				 ['sad',   emotion_id("sad")  ],
 				 ['angry', emotion_id("angry")],
 				 ['calm',  emotion_id("calm") ]
 				]),{class: :select}) %> 
 	    <br>  
-	    <div class="radio_button"><%= radio_button_tag :radio, :video %></div> <span class="radio_btn_opt">Video</span>
-	    <div class="radio_button"><%= radio_button_tag :radio, :music, checked = true %></div> <span class="radio_btn_opt">Music</span>  
+	    <div class="radio_button"><%= radio_button_tag :media, :video %></div> <span class="radio_btn_opt">Video</span>
+	    <div class="radio_button"><%= radio_button_tag :media, :music, checked = true %></div> <span class="radio_btn_opt">Music</span>  
 	    <br>
 			<%= submit_tag 'Hit It!', class: :hit_button %>
 		<% end %>

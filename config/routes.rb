@@ -6,14 +6,17 @@ Rails.application.routes.draw do
   # end 
    
   get 'home/show' 
-  post 'home/show'  
+  post 'home/show', to: 'home#reroute'  
+
+  post 'home/toggle'
 
   get 'home/video_form'
   #post 'home/video_form'
   get 'home/video_success'
   post 'home/video_success'
-
-  get 'home/contact'
+ 
+  get 'show/:emotion/:media', to: 'home#show', as: 'emotion_media' 
+  get 'home/contact' 
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
