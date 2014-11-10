@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
  
+
+
+gem 'mysql2'
 group :development, :test do 
 	gem 'rspec-rails', '~> 3.0.0'
 	gem 'database_cleaner'
