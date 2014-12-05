@@ -1,0 +1,16 @@
+[global]
+ApplicationName=animote-v1
+AwsCredentialFile=C:\Users\Jason\.elasticbeanstalk\aws_credential_file
+DevToolsEndpoint=git.elasticbeanstalk.us-east-1.amazonaws.com
+EnvironmentName=animote-v1-env
+EnvironmentTier=WebServer::Standard::1.0
+EnvironmentType=SingleInstance
+InstanceProfileName=aws-elasticbeanstalk-ec2-role
+OptionSettingFile=C:\Users\Jason\Desktop\animote\.elasticbeanstalk\optionsettings.animote-v1-env
+RdsDeletionPolicy=Delete
+RdsEnabled=Yes
+RdsSourceSnapshotName=
+Region=us-east-1
+ServiceEndpoint=https://elasticbeanstalk.us-east-1.amazonaws.com
+SolutionStack=64bit Amazon Linux 2014.09 v1.0.9 running Ruby 2.1 (Passenger Standalone)
+
